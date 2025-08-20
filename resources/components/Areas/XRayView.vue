@@ -36,7 +36,7 @@
   const cacheIcon = computed(() => (cleaning.value ? 'loader' : 'x-ray-brush'))
   const stats = computed(() => {
     return [
-      { value: props.page.nice, label: window.panel.$t('beebmx.kirby-x-ray.resource'), info: props.page.title, icon: 'dashboard' },
+      { value: props.page.nice, label: window.panel.$t('beebmx.x-ray.resource'), info: props.page.title, icon: 'dashboard' },
       { value: `${props.page.pages.count} ${window.panel.$t('pages')}`, label: window.panel.$t('pages'), info: props.page.pages.nice, icon: 'x-ray-pages' },
       { value: `${props.page.files.count} ${window.panel.$t('files')}`, label: window.panel.$t('files'), info: props.page.files.nice, icon: 'x-ray-files' },
     ]
@@ -79,13 +79,13 @@
       .then(({ success }) => {
         if (success) {
           window.panel.notification.success({
-            message: window.panel.$t('beebmx.kirby-x-ray.cache.cleared'),
+            message: window.panel.$t('beebmx.x-ray.cache.cleared'),
           })
 
           window.panel.view.refresh()
         } else {
           window.panel.notification.info({
-            message: window.panel.$t('beebmx.kirby-x-ray.cache.empty'),
+            message: window.panel.$t('beebmx.x-ray.cache.empty'),
           })
         }
       })
@@ -107,7 +107,7 @@
 
       <k-button-group slot="buttons">
         <k-button v-if="props.cache" :icon="cacheIcon" :disabled="cleaning" variant="filled" :title="props.page.title" @click="clearCache">{{
-          $t('beebmx.kirby-x-ray.cache.clear')
+          $t('beebmx.x-ray.cache.clear')
         }}</k-button>
       </k-button-group>
     </k-header>

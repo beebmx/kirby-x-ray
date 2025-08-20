@@ -17,7 +17,7 @@ class RenderXRayButton extends ViewButton
             disabled: $disabled,
             icon: MakeXRayArea::getIcon($kirby),
             link: MakeXRayArea::getRoutePrefix().$uri,
-            text: $kirby->option('beebmx.kirby-x-ray.title', 'X Ray'),
+            text: $kirby->option('beebmx.x-ray.title', 'X Ray'),
         );
     }
 }

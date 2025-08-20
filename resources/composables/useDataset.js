@@ -78,7 +78,7 @@ export function useDataset(props) {
   const options = ref([
     {
       icon: 'dashboard',
-      text: window.panel.$t('beebmx.kirby-x-ray.resources.all'),
+      text: window.panel.$t('beebmx.x-ray.resources.all'),
       type: 'all',
     },
     {

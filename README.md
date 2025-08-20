@@ -1,4 +1,4 @@
-<p align="center"><a href="https://github.com/beebmx/kirby-x-ray" rel="noopener"><img src="/.github/assets/logo.svg?raw=true" width="175" alt="Kirby X-Ray Logo"></a></p>
+<p align="center"><a href="https://github.com/beebmx/kirby-x-ray" rel="noopener"><img src="/.github/assets/logo.svg?raw=true" width="175" alt="X-Ray Logo"></a></p>
 
 <p align="center">
 <a href="https://github.com/beebmx/kirby-x-ray/actions"><img src="https://img.shields.io/github/actions/workflow/status/beebmx/kirby-x-ray/tests.yml?branch=main" alt="Build Status"></a>
@@ -7,11 +7,11 @@
 <a href="https://packagist.org/packages/beebmx/kirby-x-ray"><img src="https://img.shields.io/packagist/l/beebmx/kirby-x-ray" alt="License"></a>
 </p>
 
-# Kirby X-Ray
+# X-Ray for Kirby
 
-`Kirby X-Ray` provides a comprehensive overview of the content present on your site and individual pages, allowing you to inspect and evaluate them at a glance.
+`X-Ray` provides a comprehensive overview of the content present on your site and individual pages, allowing you to inspect and evaluate them at a glance.
 
-![Kirby X-Ray](/.github/assets/banner.jpg)
+![X-Ray](/.github/assets/banner.jpg)
 
 ****
 
@@ -33,7 +33,7 @@ composer require beebmx/kirby-x-ray
 
 ## Usage
 
-`Kirby X-Ray` adds a new panel `area`, and by default, it is already configured to be accessible from the panel navigation, but you can customize it with different options.
+`X-Ray` adds a new panel `area`, and by default, it is already configured to be accessible from the panel navigation, but you can customize it with different options.
 
 ### Overview section
 
@@ -43,7 +43,7 @@ By default, it shows the `site` or `page` overview, but you can change the view 
 ```php
 use Beebmx\KirbyXRay\Enums\FilterType;
 
-'beebmx.kirby-x-ray' => [
+'beebmx.x-ray' => [
     'overview' => FilterType::Files,
 ],
 ```
@@ -51,14 +51,14 @@ use Beebmx\KirbyXRay\Enums\FilterType;
 > [!NOTE]
 > You can choose between `FilterType::Page`, `FilterType::Files`, and `FilterType::Pages` to change the default view of the overview section.
 
-![Kirby X-Ray preview](/.github/assets/preview.jpg)
+![X-Ray preview](/.github/assets/preview.jpg)
 
 > [!NOTE]
-> `Kirby X-Ray` supports light and dark modes, so it will adapt to the current panel theme.
+> `X-Ray` supports light and dark modes, so it will adapt to the current panel theme.
 
 ### Page button
 
-For your convenience, `Kirby X-Ray` comes with the ability to add a button to the page panel that allows you to quickly access the X-Ray details of the current page.
+For your convenience, `X-Ray` comes with the ability to add a button to the page panel that allows you to quickly access the X-Ray details of the current page.
 
 ```yaml
 buttons:
@@ -67,11 +67,11 @@ buttons:
 ```
 
 > [!NOTE]
-> If a user doesn’t have permission to access `Kirby X-Ray`, the button will be disabled and the area won’t be accessible (see [Permissions](#permissions)).
+> If a user doesn’t have permission to access `X-Ray`, the button will be disabled and the area won’t be accessible (see [Permissions](#permissions)).
 
 ### Permissions
 
-By default, `Kirby X-Ray` is enabled for all users (with panel access), but you can restrict access to it by setting a custom permission in your user roles.
+By default, `X-Ray` is enabled for all users (with panel access), but you can restrict access to it by setting a custom permission in your user roles.
 
 ```yaml
 # site/blueprints/users/editor.yml
@@ -84,16 +84,16 @@ permissions:
 
 ## Options
 
-| Option                             |   Type   |     Default      | Description                                                                                            |
-|:-----------------------------------|:--------:|:----------------:|:-------------------------------------------------------------------------------------------------------|
-| beebmx.kirby-x-ray.autoclean.files |  `bool`  |       true       | When this option is `true` and a `file` is changed, it will automatically reset the cache of the page. |
-| beebmx.kirby-x-ray.autoclean.pages |  `bool`  |       true       | When this option is `true` and a `page` is changed, it will automatically reset the cache of the page. |
-| beebmx.kirby-x-ray.cache           |  `bool`  |       true       | When this option is `true`, it will cache the data of the `site` and `pages` inspected.                |
-| beebmx.kirby-x-ray.icon            | `string` |    x-ray-icon    | With this option, you can change the `default` icon of the area and the buttons.                       |
-| beebmx.kirby-x-ray.limit.overview  |  `int`   |        5         | The number of rows displayed in the `overview` section.                                                |
-| beebmx.kirby-x-ray.limit.resource  |  `int`   |        10        | The number of rows displayed in the full table (resources) section.                                    |
-| beebmx.kirby-x-ray.title           | `string` |      X Ray       | The title of the area.                                                                                 |
-| beebmx.kirby-x-ray.overview        |  `enum`  | FilterType::Page | The `default` view in the `overview` section.                                                          |
+| Option                       |   Type   |     Default      | Description                                                                                            |
+|:-----------------------------|:--------:|:----------------:|:-------------------------------------------------------------------------------------------------------|
+| beebmx.x-ray.autoclean.files |  `bool`  |       true       | When this option is `true` and a `file` is changed, it will automatically reset the cache of the page. |
+| beebmx.x-ray.autoclean.pages |  `bool`  |       true       | When this option is `true` and a `page` is changed, it will automatically reset the cache of the page. |
+| beebmx.x-ray.cache           |  `bool`  |       true       | When this option is `true`, it will cache the data of the `site` and `pages` inspected.                |
+| beebmx.x-ray.icon            | `string` |    x-ray-icon    | With this option, you can change the `default` icon of the area and the buttons.                       |
+| beebmx.x-ray.limit.overview  |  `int`   |        5         | The number of rows displayed in the `overview` section.                                                |
+| beebmx.x-ray.limit.resource  |  `int`   |        10        | The number of rows displayed in the full table (resources) section.                                    |
+| beebmx.x-ray.title           | `string` |      X Ray       | The title of the area.                                                                                 |
+| beebmx.x-ray.overview        |  `enum`  | FilterType::Page | The `default` view in the `overview` section.                                                          |
 
 
 Here's an example of a full use of the options from the `config.php` file:
@@ -101,7 +101,7 @@ Here's an example of a full use of the options from the `config.php` file:
 ```php
 use Beebmx\KirbyXRay\Enums\FilterType;
 
-'beebmx.kirby-x-ray' => [
+'beebmx.x-ray' => [
     'autoclean' => [
         'files' => true,
         'pages' => true,

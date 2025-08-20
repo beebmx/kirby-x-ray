@@ -1,6 +1,6 @@
 import AreaXRayView from './components/Areas/XRayView.vue'
 
-window.panel.plugin('beebmx/kirby-x-ray', {
+window.panel.plugin('beebmx/x-ray', {
   components: {
     'k-x-ray-view': AreaXRayView,
   },

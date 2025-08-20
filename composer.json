@@ -1,9 +1,9 @@
 {
     "name": "beebmx/kirby-x-ray",
-    "description": "Kirby X-Ray provides a comprehensive overview of the content present on your site and individual pages, allowing you to inspect and evaluate them at a glance.",
+    "description": "X-Ray provides a comprehensive overview of the content present on your site and individual pages, allowing you to inspect and evaluate them at a glance.",
     "license": "MIT",
     "type": "kirby-plugin",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "keywords": [
         "xray",
         "x-ray",

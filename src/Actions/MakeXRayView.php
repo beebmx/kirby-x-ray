@@ -18,12 +18,12 @@ class MakeXRayView
 
                     return [
                         'component' => 'k-x-ray-view',
-                        'title' => $kirby->option('beebmx.kirby-x-ray.title', 'X Ray'),
+                        'title' => $kirby->option('beebmx.x-ray.title', 'X Ray'),
                         'props' => [
-                            'cache' => $kirby->option('beebmx.kirby-x-ray.cache', true),
-                            'overview' => $kirby->option('beebmx.kirby-x-ray.limit.overview', 5),
-                            'resource' => $kirby->option('beebmx.kirby-x-ray.limit.resource', 10),
-                            'view' => $kirby->option('beebmx.kirby-x-ray.overview', FilterType::Page)?->value ?: 'page',
+                            'cache' => $kirby->option('beebmx.x-ray.cache', true),
+                            'overview' => $kirby->option('beebmx.x-ray.limit.overview', 5),
+                            'resource' => $kirby->option('beebmx.x-ray.limit.resource', 10),
+                            'view' => $kirby->option('beebmx.x-ray.overview', FilterType::Page)?->value ?: 'page',
                             ...$content,
                         ],
 

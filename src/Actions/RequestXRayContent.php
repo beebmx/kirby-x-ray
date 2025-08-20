@@ -27,12 +27,12 @@ class RequestXRayContent
         $page = (new GetPageBy)($page);
         $hash = (new GetHashBy)($page);
 
-        if ($cache = $this->kirby->cache('beebmx.kirby-x-ray')->get($hash)) {
+        if ($cache = $this->kirby->cache('beebmx.x-ray')->get($hash)) {
             return $cache;
         }
 
         $xray = $this->getXRay($page);
-        $this->kirby->cache('beebmx.kirby-x-ray')->set(key: $hash, value: $xray);
+        $this->kirby->cache('beebmx.x-ray')->set(key: $hash, value: $xray);
 
         return $xray;
     }

@@ -39,7 +39,7 @@
   const buttons = computed(() => [
     {
       icon: 'filter',
-      text: window.panel.$t('beebmx.kirby-x-ray.filter'),
+      text: window.panel.$t('beebmx.x-ray.filter'),
       click: () => dropdown.value.toggle(),
     },
     { icon: showSearch.value ? 'cancel-small' : 'search', text: window.panel.$t('search'), click: () => onSearchToggle() },
@@ -68,14 +68,14 @@
   function optionsBy(item) {
     return [
       {
-        text: window.panel.$t('beebmx.kirby-x-ray.inspect'),
+        text: window.panel.$t('beebmx.x-ray.inspect'),
         icon: 'x-ray-icon',
         link: `x-ray/${item.id}`,
         disabled: item.type !== 'page',
       },
 
       {
-        text: window.panel.$t('beebmx.kirby-x-ray.area.view'),
+        text: window.panel.$t('beebmx.x-ray.area.view'),
         icon: 'x-ray-eye',
         link: item.panel,
       },
@@ -85,7 +85,7 @@
 
 <template>
   <div class="k-x-ray-area-resource">
-    <k-section class="k-x-ray-area-resource-header" :label="$t('beebmx.kirby-x-ray.resources')" :buttons="buttons">
+    <k-section class="k-x-ray-area-resource-header" :label="$t('beebmx.x-ray.resources')" :buttons="buttons">
       <k-dropdown-content ref="dropdown" :options="filter" />
       <k-input v-if="showSearch" :autofocus="true" icon="search" :placeholder="$t('search')" type="search" @input="search = $event" @keydown.native.esc="onSearchToggle" />
 
@@ -94,7 +94,7 @@
           <thead>
             <tr>
               <th data-mobile="true" class="k-x-ray-area-resource-cell-dot"></th>
-              <th data-mobile="true">{{ $t('beebmx.kirby-x-ray.resource') }}</th>
+              <th data-mobile="true">{{ $t('beebmx.x-ray.resource') }}</th>
               <th data-mobile="true">{{ $t('size') }}</th>
               <th>{{ $t('type') }}</th>
               <th data-mobile="true" class="k-table-options-column"></th>
@@ -105,7 +105,7 @@
               <td data-mobile="true"><Icon :item="item" :status="item?.status" /></td>
               <td class="k-x-ray-area-table-title" data-mobile="true">{{ item.label }}</td>
               <td data-mobile="true">{{ item.nice }}</td>
-              <td>{{ $t(`beebmx.kirby-x-ray.type.${item.type || 'page'}`) }}</td>
+              <td>{{ $t(`beebmx.x-ray.type.${item.type || 'page'}`) }}</td>
               <td data-mobile="true" class="k-table-options-column">
                 <k-options-dropdown :options="optionsBy(item)" />
               </td>

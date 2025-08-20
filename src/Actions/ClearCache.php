@@ -21,7 +21,7 @@ class ClearCache
         $hash = (new GetHashBy)($page);
 
         return [
-            'success' => $kirby->cache('beebmx.kirby-x-ray')->remove($hash),
+            'success' => $kirby->cache('beebmx.x-ray')->remove($hash),
         ];
     }
 }

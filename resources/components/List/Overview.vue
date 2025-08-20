@@ -55,7 +55,7 @@
   function cellOptions(item) {
     return [
       {
-        text: window.panel.$t('beebmx.kirby-x-ray.area.view'),
+        text: window.panel.$t('beebmx.x-ray.area.view'),
         icon: isSelected(item) ? 'x-ray-eye' : 'x-ray-eye-off',
         click: () => {
           emit('highlight', getHighlight(item))
@@ -95,7 +95,7 @@
           <thead>
             <tr>
               <th data-mobile="true" class="k-x-ray-area-list-cell-dot"></th>
-              <th data-mobile="true">{{ $t('beebmx.kirby-x-ray.resource') }}</th>
+              <th data-mobile="true">{{ $t('beebmx.x-ray.resource') }}</th>
               <th>{{ $t('size') }}</th>
               <th data-mobile="true" class="k-table-options-column"></th>
             </tr>

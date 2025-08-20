@@ -31,12 +31,12 @@ class MakeXRayArea
 
     public static function getLabel(App $kirby): string
     {
-        return $kirby->option('beebmx.kirby-x-ray.title', 'X Ray');
+        return $kirby->option('beebmx.x-ray.title', 'X Ray');
     }
 
     public static function getIcon(App $kirby): string
     {
-        return $kirby->option('beebmx.kirby-x-ray.icon', 'x-ray-icon');
+        return $kirby->option('beebmx.x-ray.icon', 'x-ray-icon');
     }
 
     protected function getMenuVisibility(): bool
