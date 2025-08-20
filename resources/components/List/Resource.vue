@@ -39,7 +39,7 @@
   const buttons = computed(() => [
     {
       icon: 'filter',
-      text: window.panel.$t('filter'),
+      text: window.panel.$t('beebmx.kirby-x-ray.filter'),
       click: () => dropdown.value.toggle(),
     },
     { icon: showSearch.value ? 'cancel-small' : 'search', text: window.panel.$t('search'), click: () => onSearchToggle() },

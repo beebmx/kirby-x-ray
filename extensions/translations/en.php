@@ -6,6 +6,7 @@ return [
     'beebmx.kirby-x-ray.cache.clear' => 'Clear cache',
     'beebmx.kirby-x-ray.cache.cleared' => 'The cache has been cleared',
     'beebmx.kirby-x-ray.cache.empty' => 'The cache has already been cleared',
+    'beebmx.kirby-x-ray.filter' => 'Filter',
     'beebmx.kirby-x-ray.inspect' => 'Inspect',
     'beebmx.kirby-x-ray.resource' => 'Resource',
     'beebmx.kirby-x-ray.resources' => 'Resources',
